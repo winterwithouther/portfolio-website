@@ -6,6 +6,8 @@
     <title>Portfolio Website</title>
     <link href="./css/index.css" rel="stylesheet">
     <script defer src="index.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="message.js"></script>
 </head>
 <body>
     <!-- <header>
@@ -29,9 +31,9 @@
         <section id="about" class="section">
             <h1 class="section-header" id="about-header">LEARN ABOUT ME</h1>
             <p id="about-me-paragraph">
-                I'm a recent high school graduate with a passion for creating. I have given the 
-                opportunity to undergo Flatiron's Software Engineering Bootcamp. My skills and youth
-                have driven me to become an asset. I thrive for continous learning and building complex
+                I'm a recent high school graduate with a passion for creating. I have been given the 
+                opportunity to undergo Flatiron's Software Engineering Bootcamp where I gained skills in Full-Stack Development.
+                My skills and youth have driven me to become an asset. I thrive for continous learning and building complex
                 systems. I was first introduced to Programming in Highschool through a game engine,
                 the idea of creation and building enticed me and drove me to become a Software Engineer.
                 <br>
@@ -52,7 +54,12 @@
                         <img class="project-img" src="../images/LegendIMG.PNG">
                     </div>
                     <div id="legend-description-container" class="description">
-                        <p>fadsijfaoij</p>
+                        <div class="project-links">
+                            <a>Github</a>
+                            <a>Demo</a>
+                            <a>Live</a>
+                        </div>
+                        <p>Yes</p>
                     </div>
                 </div>
                 <div class="project" id="poketeams-div">
@@ -61,7 +68,12 @@
                         <img class="project-img" src="../images/PokemonTeams.PNG">
                     </div>
                     <div id="poketeams-description-container" class="description">
-                        <p>adfkjadfn</p>
+                        <div class="project-links">
+                            <a>Github</a>
+                            <a>Demo</a>
+                            <a>Live</a>
+                        </div>
+                        <p>Yes</p>
                     </div>
                 </div>
                 <div class="project" id="wordle-div">
@@ -70,7 +82,12 @@
                         <img class="project-img" src="../images/WordleImg.PNG">
                     </div>
                     <div id="wordle-description-container" class="description">
-                        <p>AODIFJAOIDFJAOIDJFFAOSIDJFOAIJDFOIAJFDOIAJDOFIJASOIDFJAOSIDFJOAIDJFOAISDJFOIAJFDOIASJDOFIASJ</p>
+                        <div class="project-links">
+                            <a>Github</a>
+                            <a>Demo</a>
+                            <a>Live</a>
+                        </div>
+                        <p>Yes</p>
                     </div>
                 </div>
                 <div class="project" id="yappin-div">
@@ -79,18 +96,38 @@
                         <img class="project-img" src="../images/YappinIMG.PNG">
                     </div>
                     <div id="yappin-description-container" class="description">
-                        <p>dasdfadsf</p>
+                        <div class="project-links">
+                            <a>Github</a>
+                            <a>Demo</a>
+                            <a>Live</a>
+                        </div>
+                        <p>Yes</p>
                     </div>
                 </div>
             </section>
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <section>
-                CONTACT
+            <h2 class="section-header">Contact</h2>
+            <section class="contact-container">
+                <form id="contact-form">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label>Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Contact</button>
+                </form>
             </section>
         </section>
+        
     </main>
 
     <!-- <footer>
