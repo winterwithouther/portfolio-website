@@ -9,29 +9,62 @@ body {
 
 #home {
     display: flex;
-    font-size: 4rem;
+    font-size: 3.5rem;
     justify-content: space-between;
     background-image: linear-gradient(rgb(0, 0, 0), rgb(40, 40, 40)); 
     width: 100%;
     height: 75vh;
     color: white;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .header-message {
     padding-left: 100px;
-    
+    overflow: hidden;
 }
 
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home-text {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 #home h1 {
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 #self-img {
-    padding-top: 40px;
-    padding-right: 100px;
-    width: 600px;
-    height: 600px;
+    padding-top: 80px;
+    padding-right: 90px;
+    width: 550px;
+    height: 550px;
 }
 
 /* ABOUT ME SECTION */
@@ -50,7 +83,6 @@ body {
     font-size: 2em;
     max-width: 700px;
     margin: auto;
-    text-decoration: underline;
 }
 
 #about-me-paragraph {
@@ -59,8 +91,8 @@ body {
     text-align: left;
 }
 
-
 #about {
+    margin-top: 130px;
     background-color: #f2f2f2;
     transform: skewY(-3deg);
     padding: 20px;
@@ -69,7 +101,6 @@ body {
 #about #about-me-paragraph, #about .section-header {
     transform: skewY(3deg);
 }
-
 
 
 .project-img {
@@ -101,6 +132,7 @@ body {
 
 .project {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 #project-container {
@@ -147,6 +179,8 @@ body {
 .project-title {
     font-weight: bold;
     margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .image-container:hover + .description {
@@ -159,17 +193,16 @@ body {
     text-align: center;
 }
 
-/* Style for the contact section */
 #contact {
-    background-color: #f8f9fa; /* Light gray background */
-    padding: 20px; /* Add some padding around the section */
+    background-color: #f8f9fa;
+    padding: 20px; 
 }
 
-/* Style for the contact form container */
+
 .contact-container {
-    max-width: 40vw; /* Limit form width */
+    max-width: 40vw;
     max-height: 70vh;
-    margin: 0 auto; /* Center the form horizontally */
+    margin: 0 auto;
     border: 1px solid #ccc;
     padding: 50px;
     background-color: white;
@@ -177,45 +210,139 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Style for form inputs and textarea */
+
 .contact-container input[type="text"],
 .contact-container input[type="email"],
 .contact-container textarea {
     height: 200%;
-    width: 100%; /* Adjusted width to occupy full width */
-    padding: 15px; /* Increase padding */
-    font-size: 18px; /* Increase font size */
-    border-radius: 8px; /* Add border radius for a rounded appearance */
-    border: 2px solid #ccc; /* Add border for better visibility */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-    margin-bottom: 20px; /* Add some space between inputs */
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px; 
+    border: 2px solid #ccc; 
+    box-sizing: border-box;
+    margin-bottom: 20px; 
 }
 
 #contact-form div {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-wrap: wrap;
 }
 
 #contact-form div > div {
-    flex: 1; /* Each input takes equal width */
-    margin-right: 20px; /* Add some space between inputs */
+    flex: 1;
+    margin-right: 20px;
 }
 
 
-/* Style for the submit button */
 .contact-container button[type="submit"] {
     width: 20%;
     padding: 10px;
-    background-color: #007bff; /* Blue submit button */
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s;
 }
 
 .contact-container button[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
+}
+
+/* HEADER */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 1000;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #555;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+
+/* FOOTER */
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.25em;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 0;
+}
+
+#footer a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 5px;
+    padding-bottom: 15px;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 

@@ -42,3 +42,54 @@ legendDiv.addEventListener("mouseenter", () => {
 legendDiv.addEventListener("mouseleave", () => {
     legendDescriptionContainer.style.opacity = 0;
 })
+
+
+const links = document.querySelectorAll('nav ul li a');
+links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        
+        links.forEach(function(link) {
+            link.classList.remove('active');
+        });
+        
+        event.target.classList.add('active');
+    });
+});
+
+links.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetId = this.getAttribute('href');
+        var targetSection = document.querySelector(targetId); 
+        if (targetSection) {
+            
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+           
+            this.classList.add('active');
+        }
+    });
+});
+
+ const sections = document.querySelectorAll('.section');
+
+ function checkSectionInView() {
+     sections.forEach(section => {
+         const sectionTop = section.getBoundingClientRect().top;
+         const windowHeight = window.innerHeight;
+
+         if (sectionTop < windowHeight * 0.75) {
+             section.classList.add('animate');
+         } else {
+             section.classList.remove('animate');
+         }
+     });
+ }
+
+ window.addEventListener('scroll', checkSectionInView);
+ window.addEventListener('resize', checkSectionInView);
+
+ checkSectionInView();
