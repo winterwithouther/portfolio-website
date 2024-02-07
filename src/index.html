@@ -8,8 +8,7 @@
     <script defer src="index.js"></script>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
+    <!-- <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -17,49 +16,76 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
     
     <main>
-        <section id="home">
-            <h2>Hi I'm,</h2>
-            <h1>Eman Gurung</h1>
-            <h2>Passionate about Software Engineering</h2>
-            <img src="../images/self.jpg">
+        <section id="home" class="section">
+            <div id="home-text">
+                <h1 id="name" class="header-message">HI I'M, <br> EMAN GURUNG <br> PASSIONATE SOFTWARE ENGINEER</h1>
+            </div>
+            <img id="self-img" src="../images/self.jpg">
         </section>
 
-        <section id="about">
-            <h1>Learn about me</h1>
-            <p>
+        <section id="about" class="section">
+            <h1 class="section-header" id="about-header">LEARN ABOUT ME</h1>
+            <p id="about-me-paragraph">
                 I'm a recent high school graduate with a passion for creating. I have given the 
                 opportunity to undergo Flatiron's Software Engineering Bootcamp. My skills and youth
-                have driven me to become an asset. If you would like to know more, please feel
-                free to contact me.
+                have driven me to become an asset. I thrive for continous learning and building complex
+                systems. I was first introduced to Programming in Highschool through a game engine,
+                the idea of creation and building enticed me and drove me to become a Software Engineer.
+                <br>
+                    <br>
+                        If you would like to discuss more, please feel free to reach out to me.
+                    </br>
+                </br>
+                egurung1117@gmail.com
             </p>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <section>
-                <div>
-                    <div>Legend Overview</div>
-                    <img src="../images/LegendIMG.PNG">
+        <section id="projects" class="section">
+            <h2 class="section-header">Projects</h2>
+            <section id="project-container">
+                <div class="project" id="legend-div">
+                    <div class="project-title">Legend</div>
+                    <div id="legend-img-container" class="image-container">
+                        <img class="project-img" src="../images/LegendIMG.PNG">
+                    </div>
+                    <div id="legend-description-container" class="description">
+                        <p>fadsijfaoij</p>
+                    </div>
                 </div>
-                <div>
-                    <div>PokeTeams Overview</div>
-                    <img src="../images/PokemonTeams.PNG">
+                <div class="project" id="poketeams-div">
+                    <div class="project-title">PokeTeams</div>
+                    <div class="image-container">
+                        <img class="project-img" src="../images/PokemonTeams.PNG">
+                    </div>
+                    <div id="poketeams-description-container" class="description">
+                        <p>adfkjadfn</p>
+                    </div>
                 </div>
-                <div>
-                    <div>Wordle Overview</div>
-                    <img src="../images/WordleImg.PNG">
+                <div class="project" id="wordle-div">
+                    <div class="project-title">Wordle</div>
+                    <div class="image-container">
+                        <img class="project-img" src="../images/WordleImg.PNG">
+                    </div>
+                    <div id="wordle-description-container" class="description">
+                        <p>AODIFJAOIDFJAOIDJFFAOSIDJFOAIJDFOIAJFDOIAJDOFIJASOIDFJAOSIDFJOAIDJFOAISDJFOIAJFDOIASJDOFIASJ</p>
+                    </div>
                 </div>
-                <div>
-                    <div>Yappin Overview</div>
-                    <img src="../images/YappinIMG.PNG">
+                <div class="project" id="yappin-div">
+                    <div class="project-title">Yappin</div>
+                    <div class="image-container">
+                        <img class="project-img" src="../images/YappinIMG.PNG">
+                    </div>
+                    <div id="yappin-description-container" class="description">
+                        <p>dasdfadsf</p>
+                    </div>
                 </div>
             </section>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <section>
                 CONTACT
@@ -67,8 +93,8 @@
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         &copy; 2024 My Portfolio
-    </footer>
+    </footer> -->
 </body>
 </html>

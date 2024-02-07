@@ -1,43 +1,141 @@
-/* body {
+body {
+    display: flex;
     font-family: Arial, sans-serif;
+    font-weight: bolder;
+    overflow-x: hidden;
+    font-size: 25px;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+#home {
+    display: flex;
+    font-size: 4rem;
+    justify-content: space-between;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(40, 40, 40)); 
     width: 100%;
-} */
+    height: 75vh;
+    color: white;
+    overflow: auto;
+}
+
+.header-message {
+    padding-left: 100px;
+    
+}
+
+#home h1 {
+    padding-top: 50px;
+}
+
+#self-img {
+    padding-top: 40px;
+    padding-right: 100px;
+    width: 600px;
+    height: 600px;
+}
+
+/* ABOUT ME SECTION */
+
+#about {
+    padding-top: 100px;
+    text-align: center;
+    border-color: black;
+    font-size: 2rem;
+}
+
+.section-header {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    height: 30px;
+    font-size: 2em;
+    max-width: 700px;
+    margin: auto;
+    text-decoration: underline;
+}
+
+#about-me-paragraph {
+    max-width: 50vw;
+    margin: auto;
+    text-align: left;
+}
+
+.project-img {
+    width: 40vw;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+    padding-top: 100px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+}
+
+#project-header {
+    margin: auto;
+}
+
+.project {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#project-container > div {
+    width: calc(50% - 20px);
+    margin: 10px;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.project-img {
+    max-width: 100%;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.description p {
+    margin: 0;
+}
+
+.project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-container:hover + .description {
+    opacity: 1;
+}
